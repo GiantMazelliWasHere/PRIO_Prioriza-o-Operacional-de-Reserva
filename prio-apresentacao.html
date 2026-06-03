@@ -1,0 +1,501 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
+  <title>PRIO — Priorização Operacional de Reserva | Localiza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/prio-style.css">
+</head>
+<body class="deck-mode">
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <div class="deck-indicator deck-chrome" id="deckIndicator" aria-live="polite">
+    <span><strong id="deckCurrent">1</strong> / <span id="deckTotal">8</span></span>
+  </div>
+
+  <nav class="deck-dots deck-chrome" id="deckDots" aria-label="Seções da apresentação"></nav>
+
+  <p class="deck-hint deck-chrome" id="deckHint">
+    <kbd>↓</kbd> <kbd>→</kbd> próxima · <kbd>↑</kbd> <kbd>←</kbd> anterior · <kbd>Home</kbd> <kbd>End</kbd>
+  </p>
+
+  <header class="nav" id="nav">
+    <a href="#inicio" class="nav-brand">PRIO<span>Localiza</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#problema">Problema</a></li>
+      <li><a href="#diagnostico">Diagnóstico</a></li>
+      <li><a href="#solucao">Solução</a></li>
+      <li><a href="#pilares">Pilares</a></li>
+      <li><a href="#prototipo">Protótipo</a></li>
+      <li><a href="#mvp">MVP</a></li>
+      <li><a href="#valor">Valor</a></li>
+      <li><a href="#proximos-passos">Próximos passos</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero deck-page" id="inicio" data-deck-title="Início">
+      <div class="hero-content reveal visible">
+        <div class="hero-line"></div>
+        <h1>PRIO</h1>
+        <p class="subtitle">Priorização Operacional de Reserva</p>
+        <p class="tagline">
+          Central de Governança de Carro Reserva Corporativo — equilibrando contratos B2B com a capacidade real da frota e protegendo a receita do varejo.
+        </p>
+        <div class="hero-cta">
+          <a href="#solucao" class="btn btn-primary">Ver a solução</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEMA (2 telas: cenário → dores) -->
+    <section class="deck-multi" id="problema">
+      <div class="deck-snap deck-snap-compact" id="problema-intro" data-deck-title="Problema" data-nav-section="problema">
+        <div class="container">
+          <span class="section-label reveal">O Problema</span>
+          <h2 class="reveal deck-title-sm">O cenário <span class="accent">atual</span></h2>
+          <p class="lead reveal">
+            Um nó operacional entre <strong>RAC</strong> (Aluguel Diário/Varejo) e <strong>GTF</strong> (Gestão de Frotas/Corporativo) compromete receita, marca e eficiência.
+          </p>
+
+          <div class="flow-diagram reveal">
+            <div class="flow-node gtf">GTF<small>Sinistros / Reservas B2B</small></div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-knot">NÓ OPERACIONAL<small>WhatsApp · Acordos verbais</small></div>
+            <span class="flow-arrow">→</span>
+            <div class="flow-node">RAC<small>Frota Varejo / App PF</small></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="deck-snap deck-snap-compact" id="problema-dores" data-deck-title="Problema — Dores" data-nav-section="problema">
+        <div class="container">
+          <span class="section-label reveal">O Problema</span>
+          <h2 class="reveal deck-title-sm">Impactos <span class="accent">operacionais</span></h2>
+
+          <div class="pain-grid">
+            <article class="pain-card reveal reveal-delay-1">
+              <h3>Dor B2B</h3>
+              <p>Lentidão no atendimento corporativo — carros reserva demoram por falta de regras e automação na cessão entre frotas.</p>
+            </article>
+            <article class="pain-card reveal reveal-delay-2">
+              <h3>Dor B2C</h3>
+              <p>Overbooking no balcão do varejo — veículos já reservados por PF via app sofrem "apagões" após cessões informais.</p>
+            </article>
+            <article class="pain-card danger reveal reveal-delay-3">
+              <h3>Informalidade</h3>
+              <p>Lideranças negociam trocas manualmente (WhatsApp, acordos verbais) — zero rastreabilidade e alto risco operacional.</p>
+            </article>
+            <article class="pain-card reveal reveal-delay-4">
+              <h3>Gargalo</h3>
+              <p>Escassez de frota força decisões reativas, consumindo horas produtivas de gestores em vez de gestão estratégica.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DIAGNÓSTICO (multi-frame: cards → gráfico → tabela) -->
+    <section class="deck-multi" id="diagnostico">
+      <div class="deck-snap" id="diagnostico-metricas" data-deck-title="Diagnóstico — Métricas" data-nav-section="diagnostico">
+        <div class="container">
+          <span class="section-label reveal">Diagnóstico</span>
+          <h2 class="reveal">Evidências e <span class="accent">impacto</span></h2>
+          <p class="lead reveal" style="margin-bottom: 2rem;">Dados de mercado, relatórios financeiros e canais de atendimento apontam para a mesma falha de governança.</p>
+
+          <div class="card-grid reveal">
+            <div class="card danger">
+              <h4>Receita B2C</h4>
+              <div class="metric">↓ Alta</div>
+              <p>Perda de diárias de alta margem por overbooking e apagões de reserva PF</p>
+            </div>
+            <div class="card warning">
+              <h4>Eficiência Operacional</h4>
+              <div class="metric">↑ Horas</div>
+              <p>Gestores em negociações manuais em vez de gestão de contrato</p>
+            </div>
+            <div class="card">
+              <h4>Marca / NPS</h4>
+              <div class="metric">↓ NPS</div>
+              <p>Quebra de promessa com cliente final — volume crítico em Reclame Aqui</p>
+            </div>
+            <div class="card">
+              <h4>Dados / Governança</h4>
+              <div class="metric">0%</div>
+              <p>Rastreabilidade de exceções e cessões informais entre RAC e GTF</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="deck-snap deck-snap-chart" id="diagnostico-indicadores" data-deck-title="Indicadores" data-nav-section="diagnostico">
+        <div class="container">
+          <span class="section-label reveal">Diagnóstico</span>
+          <div class="chart-block reveal" style="margin-top: 0;">
+            <h3>Indicadores simulados — impacto da informalidade</h3>
+            <div class="chart-row" data-width="78">
+              <span class="chart-label">Tempo médio cessão B2B</span>
+              <div class="chart-bar-wrap"><div class="chart-bar danger"></div></div>
+              <span class="chart-value">+78%</span>
+            </div>
+            <div class="chart-row" data-width="65">
+              <span class="chart-label">Conflitos reserva PF</span>
+              <div class="chart-bar-wrap"><div class="chart-bar danger"></div></div>
+              <span class="chart-value">+65%</span>
+            </div>
+            <div class="chart-row" data-width="82">
+              <span class="chart-label">Horas gestão manual</span>
+              <div class="chart-bar-wrap"><div class="chart-bar"></div></div>
+              <span class="chart-value">+82%</span>
+            </div>
+            <div class="chart-row" data-width="95">
+              <span class="chart-label">Exceções sem log</span>
+              <div class="chart-bar-wrap"><div class="chart-bar danger"></div></div>
+              <span class="chart-value">95%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="deck-snap" id="diagnostico-fontes" data-deck-title="Fontes" data-nav-section="diagnostico">
+        <div class="container">
+          <span class="section-label reveal">Diagnóstico</span>
+          <h2 class="reveal" style="font-size: 1.5rem; margin-bottom: 1.5rem;">Fontes e <span class="accent">implicações</span></h2>
+          <div class="table-wrap reveal" style="margin-top: 0;">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Fonte</th>
+                  <th>Insight</th>
+                  <th>Implicação</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Mercado / Benchmark</td>
+                  <td>Líderes usam governança de frota integrada B2B↔B2C</td>
+                  <td>Gap competitivo em automação e rastreabilidade</td>
+                </tr>
+                <tr>
+                  <td>Relatórios Financeiros</td>
+                  <td>Margem varejo erodida por indisponibilidade não planejada</td>
+                  <td>Proteção de receita exige regras antes da cessão RAC</td>
+                </tr>
+                <tr>
+                  <td>Reclame Aqui / NPS</td>
+                  <td>Reclamações ligadas a promessa não cumprida de veículo</td>
+                  <td>Marca e retenção dependem de visibilidade de impacto</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SOLUÇÃO (resposta estratégica + destaque PRIO) -->
+    <section class="solution-banner deck-page" id="solucao" data-deck-title="Solução" data-nav-section="solucao">
+      <span class="section-label reveal">A Resposta Estratégica</span>
+      <p class="quote reveal">
+        De decisões reativas e informais para uma <strong>Central de Governança</strong> que funciona como termômetro entre contrato corporativo e capacidade real.
+      </p>
+      <div class="highlight-box reveal reveal-delay-1">
+        <h2>PRIO</h2>
+        <p>Priorização Operacional de Reserva — interseção exclusiva GTF × RAC</p>
+      </div>
+    </section>
+
+    <!-- PILARES (6 pilares em uma tela) -->
+    <section class="deck-page" id="pilares" data-deck-title="Pilares PRIO" data-nav-section="pilares">
+      <div class="container">
+        <span class="section-label reveal">Arquitetura da Solução</span>
+        <h2 class="reveal deck-title-sm">Pilares do <span class="accent">PRIO</span></h2>
+        <p class="lead reveal">Como a Central de Governança equilibra contratos com a frota disponível.</p>
+
+        <div class="pillar-grid pillar-grid-6">
+          <article class="card pillar-card reveal">
+            <div class="icon">⚡</div>
+            <h4>Automação de Disponibilidade</h4>
+            <p>Consulta em tempo real com cálculo de impacto no varejo antes de qualquer cessão.</p>
+          </article>
+          <article class="card pillar-card reveal reveal-delay-1">
+            <div class="icon">📋</div>
+            <h4>Matriz de Equivalência</h4>
+            <p>Registro ágil que impede entrega de categoria inferior ao padrão contratado B2B.</p>
+          </article>
+          <article class="card pillar-card reveal reveal-delay-2">
+            <div class="icon">👁</div>
+            <h4>Monitor de Impacto</h4>
+            <p>Alerta se o veículo RAC possui reserva futura para pessoa física no app.</p>
+          </article>
+          <article class="card pillar-card reveal reveal-delay-3">
+            <div class="icon">✔</div>
+            <h4>Alçada Inteligente</h4>
+            <p>Liberações automáticas seguras; aprovação da liderança apenas em conflitos críticos.</p>
+          </article>
+          <article class="card pillar-card reveal reveal-delay-4">
+            <div class="icon">📋</div>
+            <h4>Auditoria Compulsória</h4>
+            <p>Toda exceção gera log obrigatório: motivo, veículo substituto e assinatura digital.</p>
+          </article>
+          <article class="card pillar-card reveal">
+            <div class="icon">📊</div>
+            <h4>Dashboard de Gestão</h4>
+            <p>Volume de trocas, tempo de aprovação e categorias com falta crônica no corporativo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROTÓTIPO VISUAL -->
+    <section class="deck-page" id="prototipo" data-deck-title="Protótipo" data-nav-section="prototipo">
+      <div class="container proto-wrap">
+        <span class="section-label reveal">Protótipo Visual</span>
+        <h2 class="reveal deck-title-sm">Como o <span class="accent">PRIO</span> ficaria na prática</h2>
+        <p class="lead reveal proto-lead">Wireframe de alta fidelidade — fluxo de cessão GTF com validação de impacto no varejo (RAC).</p>
+
+        <div class="proto-scale-wrap reveal reveal-delay-1">
+        <div class="proto-app" role="img" aria-label="Protótipo da interface PRIO para cessão de veículo">
+          <div class="proto-chrome">
+            <span class="proto-dot"></span>
+            <span class="proto-dot"></span>
+            <span class="proto-dot"></span>
+            <span class="proto-url">prio.localiza.com.br/cessoes/CR-2847</span>
+          </div>
+          <div class="proto-topbar">
+            <div class="proto-brand">PRIO <span>MVP</span></div>
+            <span class="proto-cluster">Cluster · Sudeste RAC+GTF</span>
+            <div class="proto-user">
+              <span class="proto-avatar">GF</span>
+              Gestor de Frota
+            </div>
+          </div>
+          <div class="proto-layout">
+            <nav class="proto-sidebar" aria-hidden="true">
+              <div class="proto-nav-item">Dashboard</div>
+              <div class="proto-nav-item active">Cessões</div>
+              <div class="proto-nav-item">Frota GTF</div>
+              <div class="proto-nav-item">Impacto RAC</div>
+              <div class="proto-nav-item">Auditoria</div>
+              <div class="proto-nav-item">Relatórios</div>
+            </nav>
+            <div class="proto-main">
+              <p class="proto-breadcrumb">Cessões / <strong>Solicitação CR-2847</strong></p>
+              <div class="proto-request-head">
+                <div>
+                  <h3>Cessão — Carro reserva corporativo</h3>
+                  <p>Contrato #8821 · Cliente B2B · Sinistro em análise</p>
+                </div>
+                <span class="proto-status pending">Aguardando decisão</span>
+              </div>
+
+              <div class="proto-stats">
+                <div class="proto-stat">
+                  <label>Frota GTF vinculada</label>
+                  <strong class="ok">2 disponíveis</strong>
+                </div>
+                <div class="proto-stat">
+                  <label>Equivalência B2B</label>
+                  <strong class="ok">SUV médio ✔</strong>
+                </div>
+                <div class="proto-stat">
+                  <label>Impacto RAC (PF)</label>
+                  <strong class="warn">1 reserva futura</strong>
+                </div>
+              </div>
+
+              <div class="proto-grid">
+                <div class="proto-panel">
+                  <h4>Dados da solicitação</h4>
+                  <div class="proto-field"><span>Categoria contratada</span><span>SUV Médio</span></div>
+                  <div class="proto-field"><span>Prazo necessário</span><span>5 dias</span></div>
+                  <div class="proto-field"><span>Agência origem</span><span>Congonhas — SP</span></div>
+                  <div class="proto-field"><span>Solicitante</span><span>Operação GTF</span></div>
+                  <div class="proto-rules">
+                    <span class="proto-tag pass">Regra 1 · GTF prioritário</span>
+                    <span class="proto-tag pass">Regra 2 · Sem downgrade</span>
+                    <span class="proto-tag">Regra 4 · Sem WhatsApp</span>
+                  </div>
+                </div>
+                <div class="proto-panel">
+                  <h4>Veículo sugerido · RAC</h4>
+                  <div class="proto-vehicle">
+                    <div class="proto-vehicle-icon">🚗</div>
+                    <div>
+                      <strong>HB20 · Placa ABC-1D23</strong>
+                      <small>Categoria equivalente · Agência Congonhas</small>
+                    </div>
+                  </div>
+                  <div class="proto-impact risk">
+                    ⚠ Reserva PF em 18/06 — aprovação do gerente obrigatória (Regra 6)
+                  </div>
+                  <div class="proto-impact safe">
+                    ✔ Matriz de equivalência validada · log de auditoria será gerado automaticamente
+                  </div>
+                </div>
+              </div>
+
+              <div class="proto-footer">
+                <span class="proto-footer-note">SLA estimado: 4 min · Última atualização: tempo real</span>
+                <div class="proto-actions">
+                  <button type="button" class="proto-btn proto-btn-ghost">Recusar</button>
+                  <button type="button" class="proto-btn proto-btn-warn">Escalar gerente</button>
+                  <button type="button" class="proto-btn proto-btn-primary">Aprovar cessão</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <p class="proto-caption reveal">Ilustração conceitual para apresentação · não representa sistema em produção</p>
+      </div>
+    </section>
+
+    <!-- MVP (6 regras + validações em uma tela) -->
+    <section class="deck-page" id="mvp" data-deck-title="MVP — Regras" data-nav-section="mvp">
+      <div class="container">
+        <span class="section-label reveal">MVP</span>
+        <h2 class="reveal deck-title-sm">Regras de ouro na <span class="accent">prática</span></h2>
+
+        <div class="rule-item reveal">
+          <span class="rule-num">1</span>
+          <div class="rule-content">
+            <h4>Prioridade na Frota Corporativa</h4>
+            <p>Busca obrigatória na frota GTF vinculada ao contrato antes de qualquer alternativa.</p>
+          </div>
+        </div>
+        <div class="rule-item reveal reveal-delay-1">
+          <span class="rule-num">2</span>
+          <div class="rule-content">
+            <h4>Bloqueio de Nível Inferior</h4>
+            <p>Proibido entregar padrão menor ao contratado B2B sem aprovação formal no sistema.</p>
+          </div>
+        </div>
+        <div class="rule-item reveal reveal-delay-2">
+          <span class="rule-num">3</span>
+          <div class="rule-content">
+            <h4>Monitor de Varejo (PF)</h4>
+            <p>Validação prévia de reservas futuras e demanda crítica RAC antes de ceder o ativo.</p>
+          </div>
+        </div>
+        <div class="rule-item reveal reveal-delay-3">
+          <span class="rule-num">4</span>
+          <div class="rule-content">
+            <h4>Fim da Informalidade</h4>
+            <p>MVP bloqueia liberação por acordo verbal — toda ação exige validação e trilha de auditoria.</p>
+          </div>
+        </div>
+        <div class="rule-item reveal reveal-delay-4">
+          <span class="rule-num">5</span>
+          <div class="rule-content">
+            <h4>Uso Residual da RAC</h4>
+            <p>Frota de aluguel diário só entra no fluxo se não houver alternativa compatível no corporativo.</p>
+          </div>
+        </div>
+        <div class="rule-item reveal">
+          <span class="rule-num">6</span>
+          <div class="rule-content">
+            <h4>Exceção de Alto Risco</h4>
+            <p>Ameaça à reserva PF → aprovação obrigatória do gerente + log de motivo e aprovador.</p>
+          </div>
+        </div>
+        <div class="validation-card reveal reveal-delay-1">
+          <h4>Validações automáticas</h4>
+          <p>Matriz de equivalência · Impacto prévio no varejo · Alertas de escassez crítica por categoria GTF</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- VALOR (2 telas: KPIs → gráfico) -->
+    <section class="deck-multi" id="valor">
+      <div class="deck-snap deck-snap-compact" id="valor-kpis" data-deck-title="Valor — KPIs" data-nav-section="valor">
+        <div class="container">
+          <span class="section-label reveal">Retorno Estratégico</span>
+          <h2 class="reveal deck-title-sm">Projeções de <span class="accent">valor</span></h2>
+
+          <div class="kpi-row" style="margin-top: 0;">
+            <div class="kpi-box reveal">
+              <div class="kpi-value">+NPS</div>
+              <p class="kpi-desc">Cumprimento de promessa ao cliente PF e B2B com visibilidade de conflito antes da entrega</p>
+            </div>
+            <div class="kpi-box reveal reveal-delay-1">
+              <div class="kpi-value">B2C</div>
+              <p class="kpi-desc">Proteção de diárias de alta margem — redução de apagões e overbooking no varejo</p>
+            </div>
+            <div class="kpi-box reveal reveal-delay-2">
+              <div class="kpi-value">−hrs</div>
+              <p class="kpi-desc">Gestores liberados de negociações informais para gestão de contrato e capacidade</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="deck-snap deck-snap-compact" id="valor-grafico" data-deck-title="Valor — Gráfico" data-nav-section="valor">
+        <div class="container">
+          <span class="section-label reveal">Retorno Estratégico</span>
+          <div class="chart-block reveal" style="margin-top: 0.5rem;">
+            <h3>Projeção de melhoria pós-PRIO (MVP)</h3>
+            <div class="chart-row" data-width="70">
+              <span class="chart-label">Tempo aprovação cessão</span>
+              <div class="chart-bar-wrap"><div class="chart-bar"></div></div>
+              <span class="chart-value">−70%</span>
+            </div>
+            <div class="chart-row" data-width="60">
+              <span class="chart-label">Conflitos reserva PF</span>
+              <div class="chart-bar-wrap"><div class="chart-bar"></div></div>
+              <span class="chart-value">−60%</span>
+            </div>
+            <div class="chart-row" data-width="100">
+              <span class="chart-label">Exceções rastreadas</span>
+              <div class="chart-bar-wrap"><div class="chart-bar"></div></div>
+              <span class="chart-value">100%</span>
+            </div>
+            <div class="chart-row" data-width="85">
+              <span class="chart-label">Insight capacidade comercial</span>
+              <div class="chart-bar-wrap"><div class="chart-bar"></div></div>
+              <span class="chart-value">+85%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- CTA (insight + passos + mensagem final) -->
+    <section class="cta-section deck-page" id="proximos-passos" data-deck-title="Próximos passos" data-nav-section="proximos-passos">
+      <div class="container deck-fechamento">
+        <span class="section-label reveal">Retorno Estratégico</span>
+        <div class="card reveal fechamento-insight">
+          <p><strong>Insight de Capacidade:</strong> Dados consolidados permitem validação comercial — evitar venda de novos contratos GTF desalinhados com a frota real disponível.</p>
+        </div>
+
+        <span class="section-label reveal">Próximos Passos</span>
+        <h2 class="reveal deck-title-sm">Implementação e <span class="accent">ROI</span></h2>
+
+        <ol class="cta-steps">
+          <li class="reveal"><strong>Piloto regional (90 dias):</strong> Um cluster RAC+GTF com regras de ouro, matriz de equivalência e alçada inteligente ativas.</li>
+          <li class="reveal reveal-delay-1"><strong>Integração de dados:</strong> Conectar disponibilidade corporativa, reservas PF e contratos B2B em tempo quase real.</li>
+          <li class="reveal reveal-delay-2"><strong>Governança e KPIs:</strong> Dashboard executivo — volume de trocas, SLA de aprovação, categorias em escassez crônica.</li>
+          <li class="reveal reveal-delay-3"><strong>Escala nacional:</strong> Rollout progressivo com auditoria compulsória e desligamento formal de cessões por WhatsApp.</li>
+        </ol>
+
+        <div class="cta-banner reveal reveal-delay-4">
+          <p>O PRIO transforma o nó operacional em vantagem competitiva: <strong>marca protegida, receita B2C preservada e governança de frota à altura do líder de mercado.</strong></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p><span class="brand">Localiza</span> · Projeto PRIO · Priorização Operacional de Reserva</p>
+  </footer>
+
+  <script src="js/prio-deck.js"></script>
+</body>
+</html>
