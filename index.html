@@ -28,6 +28,7 @@
     <a href="#inicio" class="nav-brand">PRIO<span>Localiza</span></a>
     <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
     <ul class="nav-links" id="navLinks">
+      <li><a href="#metodo">Método</a></li>
       <li><a href="#problema">Problema</a></li>
       <li><a href="#diagnostico">Diagnóstico</a></li>
       <li><a href="#solucao">Solução</a></li>
@@ -51,6 +52,30 @@
         </p>
         <div class="hero-cta">
           <a href="#solucao" class="btn btn-primary">Ver a solução</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MÉTODO ("Como chegamos aqui") -->
+    <section class="deck-page" id="metodo" data-deck-title="Método" data-nav-section="metodo">
+      <div class="container">
+        <span class="section-label reveal">Método</span>
+        <h2 class="reveal deck-title-sm">Como <span class="accent">chegamos aqui</span></h2>
+        <p class="lead reveal">O processo de tomada de decisão da squad — da leitura do cenário à definição do problema.</p>
+
+        <div class="card-grid" style="margin-top: 1.5rem;">
+          <div class="card reveal">
+            <h4>01 · Avaliação de dores</h4>
+            <p>Avaliamos três dores operacionais possíveis no cenário de frotas corporativas, considerando abrangência de impacto, viabilidade de rastreamento e risco financeiro associado a cada uma.</p>
+          </div>
+          <div class="card warning reveal reveal-delay-1">
+            <h4>02 · Escolha do gargalo</h4>
+            <p>Selecionamos o gargalo de governança entre os segmentos GTF e RAC por apresentar o maior risco financeiro silencioso: receita destruída sem rastro, sem auditoria e sem possibilidade de atribuição de causa.</p>
+          </div>
+          <div class="card reveal reveal-delay-2">
+            <h4>03 · Papel da tecnologia</h4>
+            <p>A IA propôs o mapeamento inicial do problema. A squad refinou o modelo para garantir travas rígidas de governança nos pontos onde a automação pura falharia — preservando o controle humano onde ele é insubstituível.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -108,28 +133,32 @@
         <div class="container">
           <span class="section-label reveal">Diagnóstico</span>
           <h2 class="reveal">Evidências e <span class="accent">impacto</span></h2>
-          <p class="lead reveal" style="margin-bottom: 2rem;">Dados de mercado, relatórios financeiros e canais de atendimento apontam para a mesma falha de governança.</p>
+          <p class="lead reveal" style="margin-bottom: 1.25rem;">Dados de mercado, relatórios financeiros e canais de atendimento apontam para a mesma falha de governança.</p>
+
+          <div class="card reveal" style="margin-bottom: 1.75rem; border-left: 3px solid var(--green-light); font-style: italic;">
+            <p>"O recorte da dor partiu de um research qualitativo da squad. Combinamos dados secundários de mercado com a observação direta de campo trazida por um de nossos integrantes, que atuou na operação de gestão de frota corporativa. Essa triangulação nos permitiu ir além da hipótese genérica e mapear o nó real de governança entre os segmentos."</p>
+          </div>
 
           <div class="card-grid reveal">
             <div class="card danger">
               <h4>Receita B2C</h4>
-              <div class="metric">↓ Alta</div>
-              <p>Perda de diárias de alta margem por overbooking e apagões de reserva PF</p>
+              <div class="metric">~67%</div>
+              <p>Margem EBITDA do varejo RAC ameaçada por overbooking induzido por cessões informais sem validação prévia</p>
             </div>
             <div class="card warning">
               <h4>Eficiência Operacional</h4>
-              <div class="metric">↑ Horas</div>
-              <p>Gestores em negociações manuais em vez de gestão de contrato</p>
+              <div class="metric">15–20%</div>
+              <p>Estimativa: parcela do tempo das lideranças locais consumida em negociações manuais de frota — "apagando incêndios" em vez de gestão estratégica</p>
             </div>
             <div class="card">
               <h4>Marca / NPS</h4>
-              <div class="metric">↓ NPS</div>
-              <p>Quebra de promessa com cliente final — volume crítico em Reclame Aqui</p>
+              <div class="metric">↑ Queixas</div>
+              <p>Aumento de reclamações por indisponibilidade de veículos confirmados via app após "apagões" de remanejamento informal</p>
             </div>
             <div class="card">
               <h4>Dados / Governança</h4>
-              <div class="metric">0%</div>
-              <p>Rastreabilidade de exceções e cessões informais entre RAC e GTF</p>
+              <div class="metric">~0%</div>
+              <p>Estimativa: quase nenhuma exceção informal é hoje rastreada entre RAC e GTF — o PRIO inverte isso</p>
             </div>
           </div>
         </div>
@@ -139,27 +168,28 @@
         <div class="container">
           <span class="section-label reveal">Diagnóstico</span>
           <div class="chart-block reveal" style="margin-top: 0;">
-            <h3>Indicadores simulados — impacto da informalidade</h3>
-            <div class="chart-row" data-width="78">
-              <span class="chart-label">Tempo médio cessão B2B</span>
+            <h3>Indicadores de mercado e estimativas <small style="font-weight:400;opacity:0.65;font-size:0.78em;">[dado público / estimativa operacional]</small></h3>
+            <div class="chart-row" data-width="96">
+              <span class="chart-label">Taxa de utilização da frota (pico histórico)</span>
               <div class="chart-bar-wrap"><div class="chart-bar danger"></div></div>
-              <span class="chart-value">+78%</span>
+              <span class="chart-value">96,4%</span>
             </div>
-            <div class="chart-row" data-width="65">
-              <span class="chart-label">Conflitos reserva PF</span>
-              <div class="chart-bar-wrap"><div class="chart-bar danger"></div></div>
-              <span class="chart-value">+65%</span>
-            </div>
-            <div class="chart-row" data-width="82">
-              <span class="chart-label">Horas gestão manual</span>
+            <div class="chart-row" data-width="73">
+              <span class="chart-label">Margem EBITDA GTF (corporativo)</span>
               <div class="chart-bar-wrap"><div class="chart-bar"></div></div>
-              <span class="chart-value">+82%</span>
+              <span class="chart-value">~73%</span>
             </div>
-            <div class="chart-row" data-width="95">
-              <span class="chart-label">Exceções sem log</span>
+            <div class="chart-row" data-width="67">
+              <span class="chart-label">Margem EBITDA RAC (varejo — receita em risco)</span>
               <div class="chart-bar-wrap"><div class="chart-bar danger"></div></div>
-              <span class="chart-value">95%</span>
+              <span class="chart-value">~67%</span>
             </div>
+            <div class="chart-row" data-width="20">
+              <span class="chart-label">Tempo das lideranças em gestão manual (est.)</span>
+              <div class="chart-bar-wrap"><div class="chart-bar danger"></div></div>
+              <span class="chart-value">15–20%</span>
+            </div>
+            <p style="margin-top:0.85rem;font-size:0.78rem;opacity:0.7;font-style:italic;">Frota total: <strong>&gt; 600.000 veículos ativos</strong> — escala que torna inviável qualquer governança por acordo verbal ou planilha descentralizada. [Fonte: Relatório Anual, Ano Y]</p>
           </div>
         </div>
       </div>
@@ -172,26 +202,42 @@
             <table class="data-table">
               <thead>
                 <tr>
+                  <th>Indicador</th>
+                  <th>Dado / Evidência</th>
+                  <th>Implicação para o PRIO</th>
                   <th>Fonte</th>
-                  <th>Insight</th>
-                  <th>Implicação</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td>Mercado / Benchmark</td>
-                  <td>Líderes usam governança de frota integrada B2B↔B2C</td>
-                  <td>Gap competitivo em automação e rastreabilidade</td>
+                  <td>Escala da frota</td>
+                  <td>&gt; 600.000 veículos ativos</td>
+                  <td>Governança por acordo verbal ou planilha é operacionalmente inviável nessa magnitude</td>
+                  <td>[Fonte: Relatório Anual, Ano Y]</td>
                 </tr>
                 <tr>
-                  <td>Relatórios Financeiros</td>
-                  <td>Margem varejo erodida por indisponibilidade não planejada</td>
-                  <td>Proteção de receita exige regras antes da cessão RAC</td>
+                  <td>Taxa de utilização</td>
+                  <td>Pico histórico 79% a 96,4%</td>
+                  <td>Ocupação altíssima — ceder 1 veículo RAC sem validação prévia quebra reserva PF imediatamente</td>
+                  <td>[Fonte: Relatório Anual, Ano Y]</td>
                 </tr>
                 <tr>
-                  <td>Reclame Aqui / NPS</td>
-                  <td>Reclamações ligadas a promessa não cumprida de veículo</td>
-                  <td>Marca e retenção dependem de visibilidade de impacto</td>
+                  <td>Rentabilidade RAC / GTF</td>
+                  <td>EBITDA ~67% RAC · ~73% GTF</td>
+                  <td>Overbooking informal destrói a receita de varejo mais rentável de curto prazo</td>
+                  <td>[Fonte: Relatório Financeiro, Ano Y]</td>
+                </tr>
+                <tr>
+                  <td>Produtividade de lideranças</td>
+                  <td>Est. 15%–20% do tempo em negociações manuais</td>
+                  <td>Horas de gestão estratégica perdidas em remanejamento informal de frota</td>
+                  <td>Estimativa operacional</td>
+                </tr>
+                <tr>
+                  <td>Evidência varejo (CPF)</td>
+                  <td>Aumento de reclamações de indisponibilidade confirmada via app</td>
+                  <td>Marca e retenção B2C dependem de visibilidade prévia do impacto de cada cessão</td>
+                  <td style="color:var(--warning);">[Inserir print real do Reclame Aqui / Fonte: período]</td>
                 </tr>
               </tbody>
             </table>
@@ -254,108 +300,216 @@
       </div>
     </section>
 
-    <!-- PROTÓTIPO VISUAL -->
-    <section class="deck-page" id="prototipo" data-deck-title="Protótipo" data-nav-section="prototipo">
-      <div class="container proto-wrap">
-        <span class="section-label reveal">Protótipo Visual</span>
-        <h2 class="reveal deck-title-sm">Como o <span class="accent">PRIO</span> ficaria na prática</h2>
-        <p class="lead reveal proto-lead">Wireframe de alta fidelidade — fluxo de cessão GTF com validação de impacto no varejo (RAC).</p>
+    <!-- PROTÓTIPO VISUAL (2 momentos sequenciais) -->
+    <section class="deck-multi" id="prototipo">
 
-        <div class="proto-scale-wrap reveal reveal-delay-1">
-        <div class="proto-app" role="img" aria-label="Protótipo da interface PRIO para cessão de veículo">
-          <div class="proto-chrome">
-            <span class="proto-dot"></span>
-            <span class="proto-dot"></span>
-            <span class="proto-dot"></span>
-            <span class="proto-url">prio.localiza.com.br/cessoes/CR-2847</span>
-          </div>
-          <div class="proto-topbar">
-            <div class="proto-brand">PRIO <span>MVP</span></div>
-            <span class="proto-cluster">Cluster · Sudeste RAC+GTF</span>
-            <div class="proto-user">
-              <span class="proto-avatar">GF</span>
-              Gestor de Frota
+      <!-- MOMENTO 1: Caminho Feliz — GTF resolve, RAC não acionada -->
+      <div class="deck-snap" id="prototipo-feliz" data-deck-title="Protótipo — Caminho Feliz" data-nav-section="prototipo">
+        <div class="container proto-wrap">
+          <span class="section-label reveal">Protótipo Visual · Momento 1 de 2</span>
+          <h2 class="reveal deck-title-sm">Caminho <span class="accent">feliz</span> — GTF resolve</h2>
+          <p class="lead reveal proto-lead">Fluxo normal: veículo encontrado na frota corporativa — RAC preservada integralmente.</p>
+
+          <div class="proto-scale-wrap reveal reveal-delay-1">
+          <div class="proto-app" role="img" aria-label="Protótipo PRIO — Momento 1: GTF resolve sem acionar RAC">
+            <div class="proto-chrome">
+              <span class="proto-dot"></span>
+              <span class="proto-dot"></span>
+              <span class="proto-dot"></span>
+              <span class="proto-url">app.prio.io/cessoes/CR-2846</span>
             </div>
-          </div>
-          <div class="proto-layout">
-            <nav class="proto-sidebar" aria-hidden="true">
-              <div class="proto-nav-item">Dashboard</div>
-              <div class="proto-nav-item active">Cessões</div>
-              <div class="proto-nav-item">Frota GTF</div>
-              <div class="proto-nav-item">Impacto RAC</div>
-              <div class="proto-nav-item">Auditoria</div>
-              <div class="proto-nav-item">Relatórios</div>
-            </nav>
-            <div class="proto-main">
-              <p class="proto-breadcrumb">Cessões / <strong>Solicitação CR-2847</strong></p>
-              <div class="proto-request-head">
-                <div>
-                  <h3>Cessão — Carro reserva corporativo</h3>
-                  <p>Contrato #8821 · Cliente B2B · Sinistro em análise</p>
-                </div>
-                <span class="proto-status pending">Aguardando decisão</span>
+            <div class="proto-topbar">
+              <div class="proto-brand">PRIO <span>MVP</span></div>
+              <span class="proto-cluster">Cluster · Sudeste RAC+GTF</span>
+              <div class="proto-user">
+                <span class="proto-avatar">GF</span>
+                Gestor de Frota
               </div>
+            </div>
+            <div class="proto-layout">
+              <nav class="proto-sidebar" aria-hidden="true">
+                <div class="proto-nav-item">Dashboard</div>
+                <div class="proto-nav-item active">Cessões</div>
+                <div class="proto-nav-item">Frota GTF</div>
+                <div class="proto-nav-item">Impacto RAC</div>
+                <div class="proto-nav-item">Auditoria</div>
+                <div class="proto-nav-item">Relatórios</div>
+              </nav>
+              <div class="proto-main">
+                <p class="proto-breadcrumb">Cessões / <strong>Solicitação CR-2846</strong></p>
+                <div class="proto-request-head">
+                  <div>
+                    <h3>Cessão — Carro reserva corporativo</h3>
+                    <p>Contrato #8820 · Cliente B2B · Sinistro em análise</p>
+                  </div>
+                  <span class="proto-status proto-status-ok">Resolvido automaticamente</span>
+                </div>
 
-              <div class="proto-stats">
-                <div class="proto-stat">
-                  <label>Frota GTF vinculada</label>
-                  <strong class="ok">2 disponíveis</strong>
-                </div>
-                <div class="proto-stat">
-                  <label>Equivalência B2B</label>
-                  <strong class="ok">SUV médio ✔</strong>
-                </div>
-                <div class="proto-stat">
-                  <label>Impacto RAC (PF)</label>
-                  <strong class="warn">1 reserva futura</strong>
-                </div>
-              </div>
-
-              <div class="proto-grid">
-                <div class="proto-panel">
-                  <h4>Dados da solicitação</h4>
-                  <div class="proto-field"><span>Categoria contratada</span><span>SUV Médio</span></div>
-                  <div class="proto-field"><span>Prazo necessário</span><span>5 dias</span></div>
-                  <div class="proto-field"><span>Agência origem</span><span>Congonhas — SP</span></div>
-                  <div class="proto-field"><span>Solicitante</span><span>Operação GTF</span></div>
-                  <div class="proto-rules">
-                    <span class="proto-tag pass">Regra 1 · GTF prioritário</span>
-                    <span class="proto-tag pass">Regra 2 · Sem downgrade</span>
-                    <span class="proto-tag">Regra 4 · Sem WhatsApp</span>
+                <div class="proto-stats">
+                  <div class="proto-stat">
+                    <label>Frota GTF vinculada</label>
+                    <strong class="ok">3 disponíveis</strong>
+                  </div>
+                  <div class="proto-stat">
+                    <label>Equivalência B2B</label>
+                    <strong class="ok">SUV médio ✔</strong>
+                  </div>
+                  <div class="proto-stat">
+                    <label>Impacto RAC (PF)</label>
+                    <strong class="ok">Não acionada</strong>
                   </div>
                 </div>
-                <div class="proto-panel">
-                  <h4>Veículo sugerido · RAC</h4>
-                  <div class="proto-vehicle">
-                    <div class="proto-vehicle-icon">🚗</div>
-                    <div>
-                      <strong>HB20 · Placa ABC-1D23</strong>
-                      <small>Categoria equivalente · Agência Congonhas</small>
+
+                <div class="proto-grid">
+                  <div class="proto-panel">
+                    <h4>Dados da solicitação</h4>
+                    <div class="proto-field"><span>Categoria contratada</span><span>SUV Médio</span></div>
+                    <div class="proto-field"><span>Prazo necessário</span><span>5 dias</span></div>
+                    <div class="proto-field"><span>Agência origem</span><span>Congonhas — SP</span></div>
+                    <div class="proto-field"><span>Solicitante</span><span>Operação GTF</span></div>
+                    <div class="proto-rules">
+                      <span class="proto-tag pass">RN-01 · GTF prioritária ✔</span>
+                      <span class="proto-tag pass">RN-02 · Sem downgrade ✔</span>
+                      <span class="proto-tag pass">RN-04 · Sem WhatsApp ✔</span>
                     </div>
                   </div>
-                  <div class="proto-impact risk">
-                    ⚠ Reserva PF em 18/06 — aprovação do gerente obrigatória (Regra 6)
-                  </div>
-                  <div class="proto-impact safe">
-                    ✔ Matriz de equivalência validada · log de auditoria será gerado automaticamente
+                  <div class="proto-panel">
+                    <h4>Veículo atribuído · Frota GTF</h4>
+                    <div class="proto-vehicle">
+                      <div class="proto-vehicle-icon">🚗</div>
+                      <div>
+                        <strong>Corolla Cross · Placa DEF-2E34</strong>
+                        <small>Categoria equivalente · Frota Corporativa própria</small>
+                      </div>
+                    </div>
+                    <div class="proto-impact safe">
+                      ✔ RN-05 · Frota RAC preservada integralmente — varejo não impactado
+                    </div>
+                    <div class="proto-impact safe">
+                      ✔ RN-03 · Log de auditoria gerado automaticamente · contrato #8820
+                    </div>
                   </div>
                 </div>
-              </div>
 
-              <div class="proto-footer">
-                <span class="proto-footer-note">SLA estimado: 4 min · Última atualização: tempo real</span>
-                <div class="proto-actions">
-                  <button type="button" class="proto-btn proto-btn-ghost">Recusar</button>
-                  <button type="button" class="proto-btn proto-btn-warn">Escalar gerente</button>
-                  <button type="button" class="proto-btn proto-btn-primary">Aprovar cessão</button>
+                <div class="proto-footer">
+                  <span class="proto-footer-note">SLA estimado: 2 min · RAC: não acionada · Última atualização: tempo real</span>
+                  <div class="proto-actions">
+                    <button type="button" class="proto-btn proto-btn-ghost">Recusar</button>
+                    <button type="button" class="proto-btn proto-btn-primary">Confirmar cessão GTF</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+          </div>
+          <p class="proto-caption reveal">Momento 1 — Caminho feliz: GTF resolve sem acionar RAC · Ilustração conceitual · não representa sistema em produção</p>
         </div>
-        </div>
-        <p class="proto-caption reveal">Ilustração conceitual para apresentação · não representa sistema em produção</p>
       </div>
+
+      <!-- MOMENTO 2: Exceção Governada — GTF esgotada, RAC com aprovação formal -->
+      <div class="deck-snap" id="prototipo-excecao" data-deck-title="Protótipo — Exceção Governada" data-nav-section="prototipo">
+        <div class="container proto-wrap">
+          <span class="section-label reveal">Protótipo Visual · Momento 2 de 2</span>
+          <h2 class="reveal deck-title-sm">Exceção <span class="accent">governada</span> — RAC com aprovação</h2>
+          <p class="lead reveal proto-lead">Fluxo de exceção: GTF esgotada — PRIO calcula impacto e exige aprovação formal antes de acionar a RAC.</p>
+
+          <div class="proto-scale-wrap reveal reveal-delay-1">
+          <div class="proto-app" role="img" aria-label="Protótipo PRIO — Momento 2: exceção RAC com aprovação obrigatória">
+            <div class="proto-chrome">
+              <span class="proto-dot"></span>
+              <span class="proto-dot"></span>
+              <span class="proto-dot"></span>
+              <span class="proto-url">app.prio.io/cessoes/CR-2847</span>
+            </div>
+            <div class="proto-topbar">
+              <div class="proto-brand">PRIO <span>MVP</span></div>
+              <span class="proto-cluster">Cluster · Sudeste RAC+GTF</span>
+              <div class="proto-user">
+                <span class="proto-avatar">GF</span>
+                Gestor de Frota
+              </div>
+            </div>
+            <div class="proto-layout">
+              <nav class="proto-sidebar" aria-hidden="true">
+                <div class="proto-nav-item">Dashboard</div>
+                <div class="proto-nav-item active">Cessões</div>
+                <div class="proto-nav-item">Frota GTF</div>
+                <div class="proto-nav-item">Impacto RAC</div>
+                <div class="proto-nav-item">Auditoria</div>
+                <div class="proto-nav-item">Relatórios</div>
+              </nav>
+              <div class="proto-main">
+                <p class="proto-breadcrumb">Cessões / <strong>Solicitação CR-2847</strong></p>
+                <div class="proto-request-head">
+                  <div>
+                    <h3>Cessão — Carro reserva corporativo</h3>
+                    <p>Contrato #8821 · Cliente B2B · Sinistro em análise</p>
+                  </div>
+                  <span class="proto-status pending">Aprovação obrigatória</span>
+                </div>
+
+                <div class="proto-stats">
+                  <div class="proto-stat">
+                    <label>Frota GTF vinculada</label>
+                    <strong class="proto-stat-danger">0 disponíveis</strong>
+                  </div>
+                  <div class="proto-stat">
+                    <label>Equivalência B2B</label>
+                    <strong class="ok">SUV médio ✔</strong>
+                  </div>
+                  <div class="proto-stat">
+                    <label>Impacto RAC (PF)</label>
+                    <strong class="warn">1 reserva futura</strong>
+                  </div>
+                </div>
+
+                <div class="proto-grid">
+                  <div class="proto-panel">
+                    <h4>Dados da solicitação</h4>
+                    <div class="proto-field"><span>Categoria contratada</span><span>SUV Médio</span></div>
+                    <div class="proto-field"><span>Prazo necessário</span><span>5 dias</span></div>
+                    <div class="proto-field"><span>Agência origem</span><span>Congonhas — SP</span></div>
+                    <div class="proto-field"><span>Solicitante</span><span>Operação GTF</span></div>
+                    <div class="proto-rules">
+                      <span class="proto-tag pass">RN-01 · GTF verificada</span>
+                      <span class="proto-tag pass">RN-02 · Sem downgrade</span>
+                      <span class="proto-tag">RN-05 · RAC residual acionada</span>
+                    </div>
+                  </div>
+                  <div class="proto-panel">
+                    <h4>Veículo sugerido · RAC (Exceção RN-05)</h4>
+                    <div class="proto-vehicle">
+                      <div class="proto-vehicle-icon">🚗</div>
+                      <div>
+                        <strong>HB20 · Placa ABC-1D23</strong>
+                        <small>Categoria equivalente · Agência Congonhas</small>
+                      </div>
+                    </div>
+                    <div class="proto-impact risk">
+                      ⚠ RN-06 · Reserva PF em 18/06 — aprovação do gerente obrigatória antes da liberação
+                    </div>
+                    <div class="proto-impact safe">
+                      ✔ RN-03 · Log criptográfico: motivo, aprovador, veículo substituto e contrato mãe
+                    </div>
+                  </div>
+                </div>
+
+                <div class="proto-footer">
+                  <span class="proto-footer-note">SLA inclui aprovação gerencial · Última atualização: tempo real</span>
+                  <div class="proto-actions">
+                    <button type="button" class="proto-btn proto-btn-ghost">Recusar</button>
+                    <button type="button" class="proto-btn proto-btn-warn">Escalar gerente</button>
+                    <button type="button" class="proto-btn proto-btn-primary">Aprovar cessão</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+          <p class="proto-caption reveal">Momento 2 — Exceção governada: GTF esgotada, RAC com aprovação formal (RN-06) · Ilustração conceitual · não representa sistema em produção</p>
+        </div>
+      </div>
+
     </section>
 
     <!-- MVP (6 regras + validações em uma tela) -->
@@ -441,27 +595,28 @@
         <div class="container">
           <span class="section-label reveal">Retorno Estratégico</span>
           <div class="chart-block reveal" style="margin-top: 0.5rem;">
-            <h3>Projeção de melhoria pós-PRIO (MVP)</h3>
+            <h3>Projeções de melhoria pós-PRIO <small style="font-weight:400;opacity:0.65;font-size:0.78em;">[a validar no piloto]</small></h3>
             <div class="chart-row" data-width="70">
-              <span class="chart-label">Tempo aprovação cessão</span>
+              <span class="chart-label">Tempo de aprovação de cessão</span>
               <div class="chart-bar-wrap"><div class="chart-bar"></div></div>
-              <span class="chart-value">−70%</span>
+              <span class="chart-value">−? % <sup style="font-size:0.6em;opacity:0.7;">¹</sup></span>
             </div>
             <div class="chart-row" data-width="60">
-              <span class="chart-label">Conflitos reserva PF</span>
+              <span class="chart-label">Conflitos de reserva PF</span>
               <div class="chart-bar-wrap"><div class="chart-bar"></div></div>
-              <span class="chart-value">−60%</span>
+              <span class="chart-value">−? % <sup style="font-size:0.6em;opacity:0.7;">¹</sup></span>
             </div>
             <div class="chart-row" data-width="100">
-              <span class="chart-label">Exceções rastreadas</span>
+              <span class="chart-label">Exceções com rastreabilidade plena</span>
               <div class="chart-bar-wrap"><div class="chart-bar"></div></div>
-              <span class="chart-value">100%</span>
+              <span class="chart-value">100% <sup style="font-size:0.6em;opacity:0.7;">²</sup></span>
             </div>
             <div class="chart-row" data-width="85">
-              <span class="chart-label">Insight capacidade comercial</span>
+              <span class="chart-label">Visibilidade de capacidade comercial</span>
               <div class="chart-bar-wrap"><div class="chart-bar"></div></div>
-              <span class="chart-value">+85%</span>
+              <span class="chart-value">+? % <sup style="font-size:0.6em;opacity:0.7;">¹</sup></span>
             </div>
+            <p style="margin-top:0.85rem;font-size:0.78rem;opacity:0.7;font-style:italic;">¹ Hipótese a validar no piloto &nbsp;·&nbsp; ² Garantia de design: toda exceção gera log obrigatório por RN-03</p>
           </div>
         </div>
       </div>
@@ -480,10 +635,10 @@
         <h2 class="reveal deck-title-sm">Implementação e <span class="accent">ROI</span></h2>
 
         <ol class="cta-steps">
-          <li class="reveal"><strong>Piloto regional (90 dias):</strong> Um cluster RAC+GTF com regras de ouro, matriz de equivalência e alçada inteligente ativas.</li>
-          <li class="reveal reveal-delay-1"><strong>Integração de dados:</strong> Conectar disponibilidade corporativa, reservas PF e contratos B2B em tempo quase real.</li>
-          <li class="reveal reveal-delay-2"><strong>Governança e KPIs:</strong> Dashboard executivo — volume de trocas, SLA de aprovação, categorias em escassez crônica.</li>
-          <li class="reveal reveal-delay-3"><strong>Escala nacional:</strong> Rollout progressivo com auditoria compulsória e desligamento formal de cessões por WhatsApp.</li>
+          <li class="reveal"><strong>Fase 1 — Dados e APIs (Semanas 01–04):</strong> Mapeamento de banco de dados e conexão de APIs em tempo real dos sistemas legados GTF e RAC. Criação e parametrização inicial da Matriz de Equivalência.</li>
+          <li class="reveal reveal-delay-1"><strong>Fase 2 — Motor de Regras e Logs (Semanas 05–08):</strong> Programação das travas automáticas RN-01 a RN-04, repositório imutável de logs de auditoria de exceções e fluxo de autenticação digital corporativa.</li>
+          <li class="reveal reveal-delay-2"><strong>Fase 3 — Monitoramento e Dashboard (Semanas 09–11):</strong> Painel gerencial consolidando volume total de trocas, tempo médio de liberação de alçadas e alertas automáticos de escassez crítica regional.</li>
+          <li class="reveal reveal-delay-3"><strong>Fase 4 — Homologação e Piloto (Semanas 12–14):</strong> Testes de estresse da engine de impacto preventivo e rollout em agências polo selecionadas antes da expansão em escala nacional.</li>
         </ol>
 
         <div class="cta-banner reveal reveal-delay-4">

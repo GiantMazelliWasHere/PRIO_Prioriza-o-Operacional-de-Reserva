@@ -1302,6 +1302,19 @@ body.deck-mode .scroll-hint::after {
   border: 1px solid rgba(243, 156, 18, 0.4);
 }
 
+.proto-status-ok {
+  background: rgba(51, 204, 102, 0.15);
+  color: var(--green-light);
+  border: 1px solid rgba(51, 204, 102, 0.35);
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.proto-stat .proto-stat-danger { color: var(--danger); }
+
 .proto-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1495,7 +1508,7 @@ body.deck-mode.slide-prototipo .deck-hint {
   display: none;
 }
 
-body.deck-mode #prototipo.deck-page {
+body.deck-mode #prototipo .deck-snap {
   --proto-pad-x: var(--pad-inline);
   --proto-pad-top: calc(var(--deck-pad-top) + 0.35rem);
   /* Reserva folga maior que a altura do indicador (1 / N) para o card nunca encostar na base */
@@ -1710,7 +1723,7 @@ body.deck-mode #prototipo .proto-footer-note {
     --deck-pad-top: calc(var(--nav-h) + 0.5rem);
   }
 
-  body.deck-mode #prototipo.deck-page {
+  body.deck-mode #prototipo .deck-snap {
     --proto-pad-top: calc(var(--deck-pad-top) + 0.15rem);
     --proto-viewport-h: max(
       10rem,
