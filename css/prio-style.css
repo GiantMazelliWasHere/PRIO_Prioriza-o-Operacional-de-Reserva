@@ -24,6 +24,10 @@
     calc(var(--deck-indicator-reserve) + env(safe-area-inset-bottom, 0px))
   );
   --deck-pad-top: calc(var(--nav-h) + max(1rem, env(safe-area-inset-top, 0px)));
+  /* Chart typography variables */
+  --chart-font-size: 0.95rem;
+  --chart-h3-font-size: 1rem;
+  --chart-footnote-font-size: 0.78rem;
 }
 
 @supports (height: 100dvh) {
@@ -663,25 +667,30 @@ h2 .accent { color: var(--green-light); }
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 2rem;
-  margin-top: 2rem;
+  padding: 3rem 2.5rem;
+  margin-top: 2.5rem;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.chart-block h3 { font-size: 1rem; margin-bottom: 1.5rem; color: var(--text); }
+.chart-block h3 { font-size: var(--chart-h3-font-size); margin-bottom: 1.5rem; color: var(--text); }
 
 .chart-row {
   display: flex;
   align-items: center;
-  margin-bottom: 1rem;
-  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+  font-size: var(--chart-font-size);
+  gap: 1rem;
+  min-height: 48px;
 }
 
-.chart-label { width: 180px; color: var(--muted); flex-shrink: 0; }
+.chart-label { width: 220px; color: var(--muted); flex-shrink: 0; }
 .chart-bar-wrap {
   flex: 1;
-  height: 28px;
+  height: 36px;
   background: var(--border);
-  border-radius: 6px;
+  border-radius: 10px;
   overflow: hidden;
   margin: 0 1rem;
 }
@@ -689,13 +698,13 @@ h2 .accent { color: var(--green-light); }
 .chart-bar {
   height: 100%;
   background: linear-gradient(90deg, var(--green), var(--green-light));
-  border-radius: 6px;
+  border-radius: 10px;
   width: 0;
   transition: width 1.2s ease;
 }
 
 .chart-bar.danger { background: linear-gradient(90deg, #c0392b, var(--danger)); }
-.chart-value { width: 56px; text-align: right; color: var(--green-light); font-weight: 700; }
+.chart-value { width: 80px; text-align: right; color: var(--green-light); font-weight: 700; }
 
 /* Table */
 .table-wrap {
@@ -797,6 +806,27 @@ h2 .accent { color: var(--green-light); }
   .pillar-grid-6 {
     grid-template-columns: repeat(2, 1fr);
   }
+  .chart-block {
+    padding: 2rem 1.25rem;
+  }
+  .chart-label { width: 140px; }
+  .chart-value { width: 64px; }
+}
+
+/* Chart footnote: keep on single line and allow horizontal scroll if necessary */
+.chart-footnote {
+  margin-top: 0.85rem;
+  font-size: var(--chart-footnote-font-size);
+  opacity: 0.7;
+  font-style: italic;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  word-break: normal;
+  hyphens: none;
 }
 
 .pillar-card {
@@ -1551,7 +1581,7 @@ body.deck-mode #prototipo .proto-wrap {
 }
 
 body.deck-mode #prototipo .section-label {
-  display: none;
+  display: inline-block;
 }
 
 body.deck-mode #prototipo .proto-lead,
@@ -1560,7 +1590,7 @@ body.deck-mode #prototipo .proto-caption {
 }
 
 body.deck-mode #prototipo .deck-title-sm {
-  display: none;
+  display: block;
 }
 
 body.deck-mode #prototipo .proto-scale-wrap {
