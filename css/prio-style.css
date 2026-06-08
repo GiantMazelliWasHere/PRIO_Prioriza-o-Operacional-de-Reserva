@@ -738,6 +738,16 @@ h2 .accent { color: var(--green-light); }
 .data-table tr:last-child td { border-bottom: none; }
 .data-table tr:hover td { background: rgba(0, 100, 60, 0.08); }
 
+/* Compact deck snap — tighter table spacing for presentation slides */
+body.deck-mode .deck-snap-compact .table-wrap { margin-top: 1rem; }
+body.deck-mode .deck-snap-compact .data-table th,
+body.deck-mode .deck-snap-compact .data-table td { padding: 0.75rem 1rem; }
+body.deck-mode .deck-snap-compact .data-table td { font-size: 0.88rem; }
+body.deck-mode .deck-snap-compact .data-table th { font-size: 0.9rem; }
+
+/* Ensure indicator column doesn't shrink too much on narrow screens */
+.deck-snap-compact .data-table td:first-child { width: 260px; max-width: 40%; }
+
 /* Solution banner */
 .solution-banner {
   text-align: center;
